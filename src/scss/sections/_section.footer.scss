@@ -1,0 +1,19 @@
+.section-footer {
+  position: relative;
+  background-color: $color-white;
+  min-height: $footer;
+  padding: 20px 0 70px;
+  z-index: 50;
+
+  @include media-breakpoint-down(lg) {
+
+  }
+
+  @include media-breakpoint-down(md) {
+
+  }
+
+  @include media-breakpoint-down(sm) {
+
+  }
+}

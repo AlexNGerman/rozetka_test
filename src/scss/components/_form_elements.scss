@@ -1,0 +1,244 @@
+.form{
+  &-control {
+    background: $color-light-grey-3;
+    border: 1px solid rgba($color-grey-7, 1);
+    box-sizing: border-box;
+    height: 43px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 43px;
+    font-family: $font-default;
+    opacity: 1;
+    font-size: 20px;
+    line-height: 1;
+    color: $color-black;
+    padding: 5px 20px;
+    letter-spacing: 0;
+
+    @include placeholder-style(rgba($color-dark, 1), $font-default, 16px, 400, false);
+
+    &__label{
+      font-family: $font-default;
+      font-size: 13px;
+      line-height: 1;
+      color: $color-dark;
+      flex: 1 0 100%;
+      padding: 0 5px;
+      text-align: left;
+      width: 100%;
+    }
+
+    @media all and (max-width: 991px) {
+      height: 48px;
+    }
+  }
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+// floating label
+.form-label-group > label {
+  position: absolute;
+  top: 22px;
+  transform: translateY(-50%);
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  line-height: 1;
+  text-align: left;
+  color: #495057;
+  border: 1px solid transparent;
+  transition: all 0.1s ease-in-out;
+}
+
+
+input{
+  &.focused,
+  &.filled{
+    padding: 10px 12px 0;
+  }
+}
+input{
+  &.focused  ~ label,
+  &.filled ~ label{
+    font-size: 12px;
+    color: #777;
+    top: 0;
+    transform: translateY(0);
+    padding-top: 5px;
+    pointer-events: none;
+  }
+}
+
+/* Customize the label (the container) */
+.checkbox {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  margin:  0 26px 26px 0;
+  float: left;
+  padding: 5px;
+
+  input {
+    position: absolute;
+    opacity: 0 !important;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 22;
+
+    & ~ .checkmark {
+      border-color: #00ba00 !important;
+      color: $color-white !important;
+    }
+    &:checked ~ .checkmark {
+      background: #00ba00 !important;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    margin:  0 26px 26px 0;
+    float: left;
+    padding: 5px;
+    border-radius: 2px;
+    background: $color-white;
+    vertical-align: -0.35em;
+    color: $color-red;
+    transition: all 0.3s ease;
+    z-index: 11;
+    border: 2px solid #00ba00;
+
+    &:after {
+      //content: "\2713";  /* Check mark character */
+      //content: "";  /* Check mark character */
+      //font-family: ;
+      content: "\f00c";  /* Check mark Font-Awesome 5 free */
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      font-size: 20px;
+      line-height: 24px;
+      margin: auto;
+      background-color: transparent;
+      border: none;
+      width: 26px;
+      height: 26px;
+      transition: 0.3s  ease !important;
+      top: 50%;
+      left: 50%;
+      padding: 1px 4px 2px;
+      text-align: center;
+      transform: translateY(-50%) translateX(-50%);
+      opacity: 0;
+    }
+  }
+
+  &-label {
+    font-family: $font-default;
+    font-weight: 400;
+    line-height: 1.2;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 33px;
+    margin: 0;
+    position: relative;
+    color: $color-dark;
+    user-select: none;
+    flex: 1 0 100%;
+
+    a {
+      font: inherit;
+
+      color: $color-red-2;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    @extend .font-20;
+  }
+
+  &-field {
+    position: relative;
+    font: inherit;
+    color: inherit;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: unset;
+
+    label, .form-label {
+      padding: 0 3px 0 40px;
+    }
+
+    input[type="checkbox"],
+    .checkbox {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0;
+      z-index: 3;
+      cursor: pointer;
+    }
+
+    &.radio{
+      .checkbox {
+        background-color: $color-light-grey-3;
+        border: 2px solid $color-grey-8;
+
+        position: relative;
+        left: auto;
+        top: auto;
+        padding: 0;
+        z-index: 3;
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        float: left;
+      }
+
+      input[type="radio"] {
+        &.form-control-radio {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          z-index: 1;
+        }
+
+        & ~ .checkbox {
+          border-color: $color-light-grey-3;
+        }
+        &:checked ~ .checkbox {
+          border-color: $color-red-primary;
+        }
+      }
+    }
+  }
+}

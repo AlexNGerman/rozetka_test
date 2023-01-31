@@ -1,0 +1,23 @@
+.section-header {
+  background-color: $color-white;
+  min-height: 60px;
+  padding: 110px 0 75px;
+
+  &__logo {
+    display: inline-block;
+    width: 40%;
+    max-width: 268px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 75px 0 50px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 60px 0 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 50px 0 35px;
+  }
+}
