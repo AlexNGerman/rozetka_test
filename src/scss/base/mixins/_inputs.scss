@@ -2,10 +2,10 @@
 
   font-family: $font-family;
 
-  @if $size{
+  @if $size {
     font-size: $size;
   }
-  @if $font-weight{
+  @if $font-weight {
     font-weight: $font-weight;
   }
   &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -15,13 +15,13 @@
     letter-spacing: inherit;
     font-style: italic;
 
-    @if $hide{
+    @if $hide {
       opacity: 0 !important;
     }
-    @if $size{
+    @if $size {
       font-size: $size;
     }
-    @if $font-weight{
+    @if $font-weight {
       font-weight: $font-weight;
     }
   }
@@ -32,13 +32,13 @@
     letter-spacing: inherit;
     font-style: italic;
 
-    @if $hide{
+    @if $hide {
       opacity: 0 !important;
     }
-    @if $size{
+    @if $size {
       font-size: $size;
     }
-    @if $font-weight{
+    @if $font-weight {
       font-weight: $font-weight;
     }
   }
@@ -49,13 +49,13 @@
     letter-spacing: inherit;
     font-style: italic;
 
-    @if $hide{
+    @if $hide {
       opacity: 0 !important;
     }
-    @if $size{
+    @if $size {
       font-size: $size;
     }
-    @if $font-weight{
+    @if $font-weight {
       font-weight: $font-weight;
     }
   }
@@ -66,13 +66,13 @@
     letter-spacing: inherit;
     font-style: italic;
 
-    @if $hide{
+    @if $hide {
       opacity: 0 !important;
     }
-    @if $size{
+    @if $size {
       font-size: $size;
     }
-    @if $font-weight{
+    @if $font-weight {
       font-weight: $font-weight;
     }
   }

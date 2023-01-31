@@ -1,23 +1,23 @@
-@mixin hover-style($bg-color: false, $font-color: false, $border-color: false, $scale: false){
+@mixin hover-style($bg-color: false, $font-color: false, $border-color: false, $scale: false) {
   transition: all 0.27s ease-in-out;
 
   &:hover,
   &:focus,
   &:active,
   &.active {
-    @if $bg-color{
+    @if $bg-color {
       background: darken($bg-color, 10%);
     }
 
-    @if $border-color{
+    @if $border-color {
       border-color: darken($border-color, 10%);
     }
 
-    @if $font-color{
+    @if $font-color {
       color: $font-color;
     }
 
-    @if $scale{
+    @if $scale {
       transform: scale($scale);
     }
   }

@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   outline: none !important;
   letter-spacing: 0;
@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-default;
 }
 
-p, li{
+p, li {
   font-size: 16px;
   line-height: 1.5;
   color: inherit;
@@ -93,11 +93,11 @@ footer {
   }
 }
 
-.text-underline{
+.text-underline {
   text-decoration: underline;
 }
 
-.main-wrap{
+.main-wrap {
   overflow: hidden;
   width: 100%;
   height: auto;
@@ -105,11 +105,11 @@ footer {
 }
 
 @include media-breakpoint-up(xl) {
-  .container{
-    &,
-    &-lg,
-    &-xl{
-      //max-width: 1200px;
-    }
-  }
+  // .container {
+  //   &,
+  //   &-lg,
+  //   &-xl {
+  //     max-width: 1200px;
+  //   }
+  // }
 }
